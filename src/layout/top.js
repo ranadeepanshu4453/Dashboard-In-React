@@ -1,6 +1,12 @@
 import FilterComponent from "../component/FilterComponent";
+import { useState } from "react";
 
 function Top() {
+  const [user, setuser] = useState('');
+  const [items, setItems] = useState(true);
+  function getUserName(){
+    setuser('Deepanshu Chauhan'); 
+  }
   return (
     <nav className="bg-white text-black p-3 shadow-md z-10">
       <div className="flex-1 flex justify-between items-center"> 
@@ -24,12 +30,15 @@ function Top() {
         {/*  */}
         <div className="flex items-center p-4 gap-10">
           <span className="flex items-center">
-            <img
+            <button onClick={getUserName}>
+              <img
               src="images/gym.jpg"
               alt="User Avatar"
               className="w-10 h-10 rounded-full border border-gray-300 mr-2"
             />
-            Deepanshu Chauhan{" "}
+            </button>
+            {user}
+            <button onClick={()=>setItems(!items)}> 
             <svg
               class="h-6 w-6 text-black mt-1"
               fill="none"
@@ -43,6 +52,11 @@ function Top() {
                 d="M19 9l-7 7-7-7"
               />
             </svg>
+            </button>
+            <div className={`${items ? 'hidden' :'inline-block'} absolute top-20 bg-white flex flex-col items-center gap-2 rounded-md shadow-lg `}>
+              <h2 className="hover:bg-slate-400 p-2">User Profile</h2>
+              <h2 className="hover:bg-slate-400 p-2">Forget Password</h2>
+            </div>
           </span>
           <span>
             <svg

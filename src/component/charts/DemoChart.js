@@ -119,8 +119,8 @@ function DemoChart() {
           <div className="bg-white rounded-lg shadow-lg p-4">
             <Bar data={barData} options={options} />
           </div>
-           {/* Pie Chart */}
-           <div className="bg-white rounded-lg shadow-lg p-4 w-1/2">
+          {/* Pie Chart */}
+          <div className="bg-white rounded-lg shadow-lg p-4 w-1/2">
             <Pie data={pieData} options={options} />
           </div>
           <div className="bg-white rounded-lg shadow-lg p-4">

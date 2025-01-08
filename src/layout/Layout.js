@@ -10,7 +10,7 @@ function Layout({ children }) {
       {/* Main Content Area */}
       <div className="flex flex-col flex-grow"> 
         <Top className="fixed top-0 left-64 right-0 z-10" /> 
-        <main className="bg-purple-50 h-full overflow-auto">
+        <main className="bg-purple-50 h-[75%] overflow-auto">
           {children}
         </main>
       </div>

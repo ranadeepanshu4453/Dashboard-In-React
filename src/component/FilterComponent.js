@@ -160,7 +160,7 @@ function FilterComponent() {
                 <span className="flex flex-col">
                   <label className="text-sm">Deepanshu Chauhan</label>
                   <label className="text-sm">Available</label>
-                </span> 
+                </span>
                 <label>19 min</label>
               </span>
             </div>
